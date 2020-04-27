@@ -1,0 +1,38 @@
+#app {
+  margin: 0;
+  text-align: left;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+// 宽度
+.w80 {
+  width: 80px !important;
+}
+.w90 {
+  width: 80px !important;
+}
+.w250 {
+  width: 250px !important;
+}
+.w500 {
+  width: 500px !important;
+}
+.w520 {
+  width: 520px !important;
+}
+
+.table-link {
+  @include box($d: inline-block, $h: 20px);
+  @include font($s: 14px, $w: bold, $c: $--color-primary, $td: none);
+  &:hover {
+    @include font($td: underline);
+  }
+}

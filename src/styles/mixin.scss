@@ -1,0 +1,155 @@
+// 可全局使用
+
+// flex布局混合，
+@mixin flex($v: null, $h: null, $w: null, $a: null) {
+  display: flex;
+  justify-content: $h;
+  align-items: $v;
+  flex-wrap: $w;
+  align-content: $a;
+}
+@mixin flexItem($f: null) {
+  flex: $f;
+}
+
+@mixin font(
+  $s: null,
+  $c: null,
+  $lh: null,
+  $w: null,
+  $ta: null,
+  $td: null,
+  $lp: null
+) {
+  font-size: $s;
+  font-weight: $w;
+  color: $c;
+  line-height: $lh;
+  text-align: $ta;
+  text-decoration: $td;
+  letter-spacing: $lp;
+}
+
+@mixin box(
+  $h: null,
+  $w: null,
+  $d: null,
+  $o: null,
+  $p: null,
+  $op: null,
+  $v: null,
+  $miw: null,
+  $mih: null,
+  $maw: null,
+  $mah: null
+) {
+  position: $p;
+  display: $d;
+  width: $w;
+  height: $h;
+  min-width: $miw;
+  min-height: $mih;
+  max-width: $maw;
+  max-height: $mah;
+  overflow: $o;
+  opacity: $op;
+  vertical-align: $v;
+}
+
+@mixin margin($mt: null, $mb: null, $ml: null, $mr: null, $m: null) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+  margin-left: $ml;
+  margin-right: $mr;
+  margin: $m;
+}
+
+@mixin padding($pt: null, $pb: null, $pl: null, $pr: null, $p: null) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+  padding-left: $pl;
+  padding-right: $pr;
+  padding: $p;
+}
+
+@mixin border(
+  $bt: null,
+  $bb: null,
+  $bl: null,
+  $br: null,
+  $bs: null,
+  $bc: null,
+  $bra: null,
+  $bsd: null,
+  $b: null
+) {
+  border: $b;
+  border-top: $bt;
+  border-bottom: $bb;
+  border-left: $bl;
+  border-right: $br;
+  border-collapse: $bc;
+  border-spacing: $bs;
+  border-radius: $bra;
+  box-shadow: $bsd;
+}
+
+@mixin li($ls: null) {
+  list-style: $ls;
+}
+
+@mixin bg(
+  $c: null,
+  $s: null,
+  $img: null,
+  $p: null,
+  $r: null,
+  $cl: null,
+  $o: null,
+  $bg: null
+) {
+  background: $bg;
+  background-color: $c;
+  background-size: $s;
+  background-image: $img;
+  background-position: $p;
+  background-repeat: $r;
+  background-clip: $cl;
+  background-origin: $o;
+}
+
+@mixin pos($p: null, $l: null, $r: null, $t: null, $b: null, $z: null) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  z-index: $z;
+}
+// 包含transition和animate系列，
+@mixin animate($t: null) {
+  transition: $t;
+}
+
+@mixin transform(
+  $sx: null,
+  $sy: null,
+  $s: null,
+  $tx: null,
+  $ty: null,
+  $t: null
+) {
+  transform: scaleX($sx);
+  transform: scaleY($sy);
+  transform: scale($s);
+  transform: translateX($tx);
+  transform: translateY($ty);
+  transform: translate($t);
+}
+
+@mixin other($c: null, $r: null, $v: null, $z: null) {
+  vertical-align: $v;
+  resize: none;
+  cursor: $c;
+  zoom: $z;
+}

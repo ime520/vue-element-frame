@@ -1,0 +1,33 @@
+// 这个文件对全局标签进行统一设置
+html,
+body {
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+}
+
+div,
+p,
+button {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  color: rgba(7, 0, 1, 0.7);
+  text-align: left;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  &:hover {
+    @include font($c: $--color-primary);
+  }
+}
